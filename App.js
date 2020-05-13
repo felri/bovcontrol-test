@@ -1,11 +1,42 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+
+//REDUX STUFF
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import reducers from 'src/redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import { PersistGate } from 'redux-persist/integration/react'
+import thunk from 'redux-thunk';
+
+//SCREENS
+import Home from 'src/screens/Home'
+
+import { StyleSheet, Text, View, AsyncStorage } from 'react-native';
+
+const persistConfig = {
+  key: 'root',
+  storage: AsyncStorage,
+  whitelist: ['weather']
+}
+
+const persistedReducer = persistReducer(persistConfig, reducers)
+
+const store = createStore(
+  persistedReducer,
+  applyMiddleware(thunk)
+)
+
+let persistor = persistStore(store)
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <View style={styles.container}>
+          <Home />
+        </View>
+      </PersistGate>
+    </Provider>
   );
 }
 
