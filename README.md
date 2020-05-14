@@ -42,7 +42,7 @@ Normalmente faço uso de testes unitários na lógica do reducer, api e etc. Nes
 
 Usei a api do metaweather, entrei em contato com o suporte do Clima Tempo e me informaram que é necessário um plano pago para ter acesso a previsão via longitude e latitude.
 
-Metaweather vem com a desvantagem de cubrir pouquissimas cidades brasileiras, então dependendo da latitude e longitude que o user estiver, a cidade apresentada pode não ser a correta (meu caso por exemplo, estou em Goiânia e a cidade mais próxima achada pelo metaweather foi Brasília).
+Metaweather vem com a desvantagem de cobrir pouquissimas cidades brasileiras, então dependendo da latitude e longitude que o user estiver, a cidade apresentada pode não ser a correta (meu caso por exemplo, estou em Goiânia e a cidade mais próxima achada pelo metaweather foi Brasília).
 
 
 Cubri as seguintes possibilidades:
