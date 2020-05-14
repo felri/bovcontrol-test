@@ -1,4 +1,6 @@
 
+## [Vídeo](https://streamable.com/z7amcj)
+
 ## Rodando o app no celular
 ### Faça o download do app Expo Client:
 
