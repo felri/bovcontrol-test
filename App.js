@@ -11,7 +11,7 @@ import thunk from 'redux-thunk';
 //SCREENS
 import Home from 'src/screens/Home'
 
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, StatusBar } from 'react-native';
 
 const persistConfig = {
   key: 'root',
@@ -32,6 +32,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
+        <StatusBar backgroundColor="#fb8c00" barStyle="light-content" />
         <Home />
       </PersistGate>
     </Provider>
