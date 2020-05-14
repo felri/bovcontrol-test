@@ -54,10 +54,17 @@ function Home(props) {
       setErrorLocation(true)
     }
     setLoading(false)
-
   }
 
   React.useEffect(() => {
+
+    //verificar conexao com internet
+    //caso tenha conexao, atualizar redux ----> getLocation()
+    //caso offline, usar o que ja tem no redux ------> checkRedux()
+    //caso redux vazio, apresentar tela de erro ------> weatherError
+    //caso nao existir permissao de localizacao, apresentar tela de erro -----> errorLocation
+    //obs: no iOS fica dificil requisitar a localizacao depois de negado pela primeira vez
+
     const unsubscribe = NetInfo.addEventListener((state) => {
       setLoading(true)
       if (state.isConnected) {

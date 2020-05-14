@@ -5,20 +5,21 @@ import { Container } from './styles'
 
 export default ({ location }) => {
   return (
-    <Container>
-      <MapView
-        style={{
-          width: Dimensions.get('window').width,
-          height: '100%'
-        }}
-        liteMode
-        initialRegion={{
-          latitude: location.lat,
-          longitude: location.long,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
-      />
-    </Container>
+    (location && location.lat && location.long) ?
+      <Container>
+        <MapView
+          style={{
+            width: Dimensions.get('window').width,
+            height: '100%'
+          }}
+          liteMode
+          initialRegion={{
+            latitude: location.lat,
+            longitude: location.long,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+      </Container> : null
   )
 }
