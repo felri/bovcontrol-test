@@ -9,6 +9,7 @@ export const ContainerColors = styled.View`
 	flex-direction: row;
 	width: 100%;
 	margin-bottom: 10px;
+	margin-top: 10px;
 	align-items: center;
 `;
 export const ContainerColor = styled.View`

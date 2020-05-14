@@ -17,7 +17,6 @@ const TitleCity = ({ title }) => (
 )
 
 function InfoWeather({ weather }) {
-  console.log(weather)
   return (
     weather && weather.city ?
       <Container>

@@ -14,7 +14,7 @@ export const ContainerTitleCity = styled.View`
 
 export const TextTitleCity = styled.Text`
 	font-size: 30px;
-	color: white;
+	color: #2479b5;
 	font-weight: bold;
 `;
 

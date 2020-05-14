@@ -24,10 +24,10 @@ export default ({ info }) => {
           fromZero={fromZero}
           yAxisSuffix="° C"
           chartConfig={{
-            backgroundColor: "#52269e",
-            backgroundGradientFrom: "#6e34d3",
-            backgroundGradientTo: "#7b37f0",
-            decimalPlaces: 2, // optional, defaults to 2dp
+            backgroundColor: "#79bed4",
+            backgroundGradientFrom: "#79bed4",
+            backgroundGradientTo: "#a0d7ef",
+            decimalPlaces: 0, // optional, defaults to 2dp
             color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
             labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
             style: {
@@ -40,7 +40,7 @@ export default ({ info }) => {
             }
           }} />
       </TouchableOpacity>
-      <ContainerColors>
+      {/* <ContainerColors>
         <ContainerColor>
           <Color color={'#b52430'} />
           <TextColor>
@@ -59,7 +59,7 @@ export default ({ info }) => {
             Mínima
           </TextColor>
         </ContainerColor>
-      </ContainerColors>
+      </ContainerColors> */}
     </Container>
   )
 }

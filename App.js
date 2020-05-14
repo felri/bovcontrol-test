@@ -32,7 +32,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <StatusBar backgroundColor="#6e34d3" barStyle="light-content" />
+        <StatusBar backgroundColor="#f1faff" barStyle="dark-content" />
         <Home />
       </PersistGate>
     </Provider>
