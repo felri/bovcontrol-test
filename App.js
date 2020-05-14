@@ -11,7 +11,7 @@ import thunk from 'redux-thunk';
 //SCREENS
 import Home from 'src/screens/Home'
 
-import { StyleSheet, Text, View, AsyncStorage } from 'react-native';
+import { AsyncStorage } from 'react-native';
 
 const persistConfig = {
   key: 'root',
@@ -32,19 +32,8 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <View style={styles.container}>
-          <Home />
-        </View>
+        <Home />
       </PersistGate>
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

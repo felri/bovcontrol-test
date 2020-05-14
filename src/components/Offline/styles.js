@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.View`
-	flex: 1;
-	justify-content: center;
-	align-items: center;
-	background-color: #fb8c00;
-`;
-
-export const ContainerLoading = styled.View`
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	height: 100%;
+	bottom: 0;
+	height: 40px;
 	width: 100%;
 	z-index: 10;
+	background: red;
 `;
 
+export const Text = styled.Text`
+	color: white;
+	font-weight: bold;
+`;

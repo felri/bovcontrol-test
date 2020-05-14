@@ -1,6 +1,6 @@
 import actions from 'src/redux/weather/types';
 
-export default (state = { data: [], error: false, lastUpdate: new Date() }, action) => {
+export default (state = { data: {}, error: false, lastUpdate: new Date() }, action) => {
   const newState = { ...state }
   switch (action.type) {
     case actions.FETCH_WEATHER:
@@ -12,7 +12,7 @@ export default (state = { data: [], error: false, lastUpdate: new Date() }, acti
       newState.error = true
       return newState
     case actions.CLEAN_WEATHER:
-      newState.data = []
+      newState.data = {}
       newState.error = false
       return newState
     default:
