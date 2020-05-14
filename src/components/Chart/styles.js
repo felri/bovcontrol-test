@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.View`
-	flex: 1;
 	justify-content: center;
 	align-items: center;
 `;
 export const ContainerColors = styled.View`
 	justify-content: center;
 	flex-direction: row;
+	width: 100%;
+	margin-bottom: 10px;
 	align-items: center;
 `;
 export const ContainerColor = styled.View`
-	flex: 1;
+flex: 1;
 	justify-content: center;
 	align-items: center;
 	width: 100%

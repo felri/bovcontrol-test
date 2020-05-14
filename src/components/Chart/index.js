@@ -14,7 +14,7 @@ export default ({ info }) => {
           data={{
             labels: info.map(f => moment(f.applicable_date).format('DD/MM')),
             datasets: [
-              { data: info.map(f => parseInt(f.the_temp)), color: (opacity = 1) => '#e26a00' },
+              { data: info.map(f => parseInt(f.the_temp)), color: (opacity = 1) => 'white' },
               { data: info.map(f => parseInt(f.max_temp)), color: (opacity = 1) => '#b52430' },
               { data: info.map(f => parseInt(f.min_temp)), color: (opacity = 1) => '#2479b5' },
             ]
@@ -24,9 +24,9 @@ export default ({ info }) => {
           fromZero={fromZero}
           yAxisSuffix="° C"
           chartConfig={{
-            backgroundColor: "#e26a00",
-            backgroundGradientFrom: "#fb8c00",
-            backgroundGradientTo: "#ffa726",
+            backgroundColor: "#52269e",
+            backgroundGradientFrom: "#6e34d3",
+            backgroundGradientTo: "#7b37f0",
             decimalPlaces: 2, // optional, defaults to 2dp
             color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
             labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
@@ -35,7 +35,7 @@ export default ({ info }) => {
             },
             propsForDots: {
               r: "6",
-              strokeWidth: "2",
+              strokeWidth: "0",
               stroke: "#ffa726"
             }
           }} />
@@ -48,7 +48,7 @@ export default ({ info }) => {
           </TextColor>
         </ContainerColor>
         <ContainerColor>
-          <Color color={'#e26a00'} />
+          <Color color={'white'} />
           <TextColor>
             Média
           </TextColor>

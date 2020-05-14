@@ -7,7 +7,7 @@ export const Container = styled.View`
 `;
 
 export const ContainerTitleCity = styled.View`
-	flex: 1;
+	flex: 2;
 	justify-content: center;
 	align-items: center;
 `;
