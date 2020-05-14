@@ -41,19 +41,21 @@ function Home(props) {
       let { status } = await Location.requestPermissionsAsync()
       if (status !== 'granted') {
         setErrorLocation(true)
+        setLoading(false)
       }
 
       let location = await Location.getCurrentPositionAsync({})
 
       if (checkIfLocationExists({ location })) {
-        setErrorLocation(false)
         const data = await getWeather({ lat: location.coords.latitude, long: location.coords.longitude })
         data ? dispatch({ type: actions.FETCH_WEATHER, payload: data }) : dispatch({ type: actions.FETCH_WEATHER_FAILED })
+        setErrorLocation(false)
+        setLoading(false)
       }
     } catch (e) {
       setErrorLocation(true)
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   React.useEffect(() => {
@@ -91,11 +93,11 @@ function Home(props) {
     <Container>
       <ImageBackground source={backgroundPng} style={{ flex: 1, resizeMode: "cover", justifyContent: "center" }}>
         <InfoWeather weather={weather} />
-        <WeatherError weatherError={weatherError && (!weather || !weather.city)} onPress={getLocation} loading={loading} />
-        <ErrorLocation errorLocation={errorLocation} onPress={getLocation} loading={loading} />
         <Loading loading={loading} />
         <Offline offline={offline} />
       </ImageBackground>
+      <WeatherError weatherError={weatherError && (!weather || !weather.city)} onPress={getLocation} loading={loading} />
+      <ErrorLocation errorLocation={errorLocation} onPress={getLocation} loading={loading} />
     </Container>
   )
 }
