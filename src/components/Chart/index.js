@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, TouchableOpacity } from 'react-native'
 import { LineChart } from 'react-native-chart-kit'
 import moment from 'moment'
-import { Container, ContainerColors, ContainerColor, Color, TextColor } from './styles'
+import { Container } from './styles'
 
 export default ({ info }) => {
   const [fromZero, setFromZero] = React.useState(true)
@@ -40,26 +40,6 @@ export default ({ info }) => {
             }
           }} />
       </TouchableOpacity>
-      {/* <ContainerColors>
-        <ContainerColor>
-          <Color color={'#b52430'} />
-          <TextColor>
-            Máxima
-          </TextColor>
-        </ContainerColor>
-        <ContainerColor>
-          <Color color={'white'} />
-          <TextColor>
-            Média
-          </TextColor>
-        </ContainerColor>
-        <ContainerColor>
-          <Color color={'#2479b5'} />
-          <TextColor>
-            Mínima
-          </TextColor>
-        </ContainerColor>
-      </ContainerColors> */}
     </Container>
   )
 }

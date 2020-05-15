@@ -16,8 +16,7 @@ export const ContainerTemp = styled.View`
 `;
 
 export const TextItem = styled.Text`
-	font-weight: bold;
-	font-size: 25px;
+	font-size: 22px;
 	color: ${props => props.color ? props.color : 'white'}
 `;
 
@@ -27,11 +26,11 @@ export const Label = styled.Text`
 
 export const Date = styled.Text`
 	color: white;
-	font-size: 30px;
+	font-size: 35px;
 `;
 
 export const ContainerInfo = styled.View`
-	background-color: rgba(0, 0, 0, 0.2); 
+	background-color: rgba(0, 0, 0, 0.1); 
 	padding: 20px;
 	margin-bottom: 20px;
 	border-radius: 10px;
