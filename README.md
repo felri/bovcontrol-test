@@ -45,7 +45,7 @@ Usei a api do metaweather, entrei em contato com o suporte do Clima Tempo e me i
 Metaweather vem com a desvantagem de cobrir pouquissimas cidades brasileiras, então dependendo da latitude e longitude que o user estiver, a cidade apresentada pode não ser a correta (meu caso por exemplo, estou em Goiânia e a cidade mais próxima achada pelo metaweather foi Brasília).
 
 
-Cubri as seguintes possibilidades:
+Cobri as seguintes possibilidades:
 
 - User nega permissão de localização, tela de erro é apresentada com a opção de tentar novamente
 - Primeiro acesso do user e ele não tem internet, tela de erro é apresentada com a opção de tentar novamente
