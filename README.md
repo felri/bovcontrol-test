@@ -14,7 +14,7 @@
 
 ##### Use a camêra para ler o QR Code abaixo:
 
-![Image description](https://i.imgur.com/XR9sfI6.png)
+![Image description](https://i.imgur.com/JrEvoqQ.png)
 
 ### Rodar localmente
 
