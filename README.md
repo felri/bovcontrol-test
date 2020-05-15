@@ -1,4 +1,6 @@
 
+## [Vídeo](https://streamable.com/z7amcj)
+
 ## Rodando o app no celular
 ### Faça o download do app Expo Client:
 
@@ -12,7 +14,7 @@
 
 ##### Use a camêra para ler o QR Code abaixo:
 
-![Image description](https://i.imgur.com/XR9sfI6.png)
+![Image description](https://i.imgur.com/JrEvoqQ.png)
 
 ### Rodar localmente
 
@@ -40,10 +42,10 @@ Normalmente faço uso de testes unitários na lógica do reducer, api e etc. Nes
 
 Usei a api do metaweather, entrei em contato com o suporte do Clima Tempo e me informaram que é necessário um plano pago para ter acesso a previsão via longitude e latitude.
 
-Metaweather vem com a desvantagem de cubrir pouquissimas cidades brasileiras, então dependendo da latitude e longitude que o user estiver, a cidade apresentada pode não ser a correta (meu caso por exemplo, estou em Goiânia e a cidade mais próxima achada pelo metaweather foi Brasília).
+Metaweather vem com a desvantagem de cobrir pouquissimas cidades brasileiras, então dependendo da latitude e longitude que o user estiver, a cidade apresentada pode não ser a correta (meu caso por exemplo, estou em Goiânia e a cidade mais próxima achada pelo metaweather foi Brasília).
 
 
-Cubri as seguintes possibilidades:
+Cobri as seguintes possibilidades:
 
 - User nega permissão de localização, tela de erro é apresentada com a opção de tentar novamente
 - Primeiro acesso do user e ele não tem internet, tela de erro é apresentada com a opção de tentar novamente
